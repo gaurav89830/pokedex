@@ -18,30 +18,33 @@
                 <div class="search-box">
                     <input id="pokemon-name" type="text"
                         class="px-4 py-2 bg-white shadow-md rounded-md focus:outline-none"
-                        placeholder="Search Pokemon" value="charizard">
+                        placeholder="Search Pokemon">
                     <button id="search" tabindex="1"
                         class="ml-2 px-4 py-2 text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none">🔍</button>
                 </div>
             </div>
 
             <div
-                class="mt-8 bg-white w-auto sm:w-2/3 lg:w-1/3 mx-auto border-black border shadow-xl p-5">
-                <div class="pokemon-imag  ">
+                class="main-div hidden mt-8 bg-white w-auto sm:w-2/3 lg:w-1/3 mx-auto border-black border shadow-xl p-5">
+                <div class="pokemon-img">
                     <!-- <img class="img-svg w-full h-auto" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/132.svg"
                     alt="Name"> -->
                     <img class="img-gif w-full mx-auto h-auto p-5"
                         src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/132.gif"
-                        alt="Name">
+                        alt="pokemon image">
                 </div>
 
                 <div class="pokemon-info text-center">
                     <h1 class="pokemon-name text-5xl font-semibold mb-2">Name</h1>
                     <p class="pokemon-weight mb-2">Weight</p>
                     <p class="pokemon-height mb-4">Height</p>
-
                     <p class="mb-1 inline-block">Abilities:</p>
-                    <p class="pokemon-abilities inline-block"></p>
+                    <p class="pokemon-abilities inline-block font-bold"></p>
                 </div>
+            </div>
+
+            <div class="secondary-div hidden mt-8 bg-white w-auto sm:w-2/3 lg:w-1/3 mx-auto border-black border shadow-xl p-5">
+                <h1 class="pokemon-name text-5xl font-semibold mb-2">Pokemon Not Found</h1>
             </div>
 
         </main>
