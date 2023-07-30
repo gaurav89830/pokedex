@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
+            rel="stylesheet">
+        <title>Pokedex</title>
+    </head>
+
+    <body style="background-image: url('images/bg.jpg')">
+        <div class="text-white text-3xl font-bold p-5"><a href="/">pokedex</a></div>
+
+        <main class="p-4 md:px-8 lg:px-16">
+            <div class="flex justify-center mt-8 md:mt-16">
+                <div class="search-box">
+                    <input id="pokemon-name" type="text"
+                        class="px-4 py-2 bg-white shadow-md rounded-md focus:outline-none"
+                        placeholder="Search Pokemon" value="charizard">
+                    <button id="search" tabindex="1"
+                        class="ml-2 px-4 py-2 text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none">🔍</button>
+                </div>
+            </div>
+
+            <div
+                class="mt-8 bg-white w-auto sm:w-2/3 lg:w-1/3 mx-auto border-black border shadow-xl p-5">
+                <div class="pokemon-imag  ">
+                    <!-- <img class="img-svg w-full h-auto" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/132.svg"
+                    alt="Name"> -->
+                    <img class="img-gif w-full mx-auto h-auto p-5"
+                        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/132.gif"
+                        alt="Name">
+                </div>
+
+                <div class="pokemon-info text-center">
+                    <h1 class="pokemon-name text-5xl font-semibold mb-2">Name</h1>
+                    <p class="pokemon-weight mb-2">Weight</p>
+                    <p class="pokemon-height mb-4">Height</p>
+
+                    <p class="mb-1 inline-block">Abilities:</p>
+                    <p class="pokemon-abilities inline-block"></p>
+                </div>
+            </div>
+
+        </main>
+        <script src="./script.js"></script>
+
+    </body>
+
+</html>
