@@ -7,13 +7,14 @@ function toLowerCase(string) {
 function getPokemon(e) {
   var name = document.querySelector("#pokemon-name").value;
   name = toLowerCase(name);
+  if(name.length == 0){
+    return;
+  }
   name.toLowerCase();
   fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
     .then((response) => response.json())
     .then((data) => {
-      document.querySelector(".secondary-div").classList.add("hidden");
-      document.querySelector(".secondary-div").classList.remove("visible");
-      document.querySelector(".main-div").classList.remove("hidden");
+    
       // document.querySelector(".img-svg").src = data.sprites.other["official-artwork"].front_default;
       document.querySelector(".img-gif").src =
         data.sprites.versions["generation-v"][
@@ -27,6 +28,10 @@ function getPokemon(e) {
       const abilityNames = data.abilities.map((obj) => obj.ability.name);
       const pTag = document.querySelector(".pokemon-abilities");
       pTag.textContent = abilityNames.join("  ");
+
+      document.querySelector(".secondary-div").classList.add("hidden");
+      document.querySelector(".secondary-div").classList.remove("visible");
+      document.querySelector(".main-div").classList.remove("hidden");
     })
     .catch((err) => {
       console.log("Pokemon nhi mila", err);
